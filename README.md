@@ -1,2 +1,2 @@
-# Leader
-Meteor working through
+# todoList
+Meteor working through Meteor tutorial Blaze version

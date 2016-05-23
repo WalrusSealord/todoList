@@ -2,11 +2,12 @@ import { Template } from "meteor/templating";
 
 import { Tasks } from "../api/tasks.js";
 
+import "./task.js";
 import "./body.html";
 
 Template.body.helpers({
-    tasks() {
-        return Tasks.find({});
+    tasks() {   // Get all task. group by user, most recent first
+        return Tasks.find ( {}, { sort: { userName : 1, createdAt : -1} } );
     }
 });
 

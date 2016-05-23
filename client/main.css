@@ -1,6 +1,4 @@
-/* CSS declarations go here */
-/* CSS declarations go here */
-body {
+
   font-family: sans-serif;
   background-color: #315481;
   background-image: linear-gradient(to bottom, #315481, #918e82 100%);
@@ -15,7 +13,7 @@ body {
   padding: 0;
   margin: 0;
 
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .container {

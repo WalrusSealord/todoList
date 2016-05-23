@@ -12,20 +12,18 @@ Template.body.helpers({
 
 Template.body.events({
     "submit .new-task" (event) {
-        console.log ("In add task event")
-        // don't let browser do submit
         event.preventDefault();
 
         // get data from form
-       const target=event.target;
-        const text=target.text.value;
+        const form=event.target;
+        const text=form.text.value;
 
         // then insert into db
         Tasks.insert({
             text,                   // value from form
-            createdAt: new Date(), // mark with timestamp
+            createdAt: new Date() // mark with timestamp
         });
         // clear input
-        target.text.value="";
-    }, //add comma here if adding more
+        form.text.value="";
+    }   //add comma here if adding more
 });

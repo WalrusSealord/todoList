@@ -20,6 +20,9 @@ Template.body.helpers({
             // Get all task. group by user, most recent first
             return Tasks.find({}, { sort: { userName: 1, createdAt: -1 } });
         }
+    },
+    incomplete(){
+        return Tasks.find({completed: {$ne: true}}).count();
     }
 });
 
